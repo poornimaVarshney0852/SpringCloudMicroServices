@@ -1,4 +1,4 @@
-package Spring.Cloud.Department.Service.controller;
+package Spring.Cloud.Employee.Service.controller;
 
 
 import org.springframework.beans.factory.annotation.Value;
@@ -13,7 +13,7 @@ public class MessageController {
     @Value("${spring.boot.message}")
     private String message;
 
-    @GetMapping("department/message")
+    @GetMapping("employee/message")
     public String getMessage(){
         return message;
     }
