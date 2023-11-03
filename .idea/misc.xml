@@ -9,6 +9,7 @@
         <option value="$PROJECT_DIR$/config-server/pom.xml" />
         <option value="$PROJECT_DIR$/Department-Service/pom.xml" />
         <option value="$PROJECT_DIR$/Employee-Service/pom.xml" />
+        <option value="$PROJECT_DIR$/RabbitMQ/pom.xml" />
       </list>
     </option>
   </component>
