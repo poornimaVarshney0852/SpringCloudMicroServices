@@ -1,36 +1,31 @@
 server:
-  port: 8084
+  port: 8000
 
 spring:
   application:
-    name: API-GATEWAY
-
+    name: CONFIG-SERVICE
 
   cloud:
-    gateway:
-      routes:
-        - id: DEPARTMENT-SERVICE
-          uri: lb://DEPARTMENT-SERVICE
-          predicates:
-            - Path=/api/departments/**
-
-        - id: EMPLOYEE-SERVICE
-          uri: lb://EMPLOYEE-SERVICE
-          predicates:
-            - Path=/api/employee/**
-
-
-
-
+    config:
+      server:
+        git:
+          uri: https://github.com/poornimaVarshney0852/SpringCloudConfigurationProperties
 
 eureka:
   instance:
     prefer-ip-address: true
   client:
-    fetch-registry: true
+    fetch-registry: false
     register-with-eureka: true
     service-url:
       defaultZone: http://host.docker.internal:8761/eureka/
+
+logging:
+  level:
+    root: DEBUG
+    org.springframework.cloud: DEBUG
+    com.yourpackage: DEBUG
+    com.yourpackage.YourClass: TRACE
 
 
 #okta configuration for api gateway

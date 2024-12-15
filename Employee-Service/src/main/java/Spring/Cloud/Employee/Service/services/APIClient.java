@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
 
-@FeignClient(url = "http://localhost:8084/api/departments", value = "DEPARTMENT-SERVICE")
+@FeignClient(url = "http://host.docker.internal:8084/api/departments", value = "DEPARTMENT-SERVICE")
 
 //@FeignClient(name = "DEPARTMENT-SERVICE",path = "http://localhost:8084/")
 public interface APIClient {
